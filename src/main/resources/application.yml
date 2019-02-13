@@ -1,8 +1,8 @@
 spring:
     datasource:
-      url: ${JDBC_DATABASE_URL}
-        username: ${JDBC_DATABASE_USERNAME}
-        password: ${JDBC_DATABASE_PASSWORD}
+      url: postgres://lrbqhazantpcgc:0c1b54eecc69344acc0e303f213c9dde69cf81881fb383c87efff35d3ba8eec6@ec2-176-34-113-195.eu-west-1.compute.amazonaws.com:5432/d7m8ot1qda92m3
+        username: lrbqhazantpcgc
+        password: 0c1b54eecc69344acc0e303f213c9dde69cf81881fb383c87efff35d3ba8eec6
 
     jpa:
         database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
