@@ -1,8 +1,8 @@
 spring:
     datasource:
-        url: jdbc:mysql://192.168.0.18:3306/immo_ld?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-        username: as
-        password: xyz123
+      url: ${JDBC_DATABASE_URL}
+        username: ${JDBC_DATABASE_USERNAME}
+        password: ${JDBC_DATABASE_PASSWORD}
 
     jpa:
         database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
