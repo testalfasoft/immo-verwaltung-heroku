@@ -1,16 +1,21 @@
 spring:
-    datasource:
-        url: ${JDBC_DATABASE_URL}
-        username: ${JDBC_DATABASE_USERNAME}
-        password: ${JDBC_DATABASE_PASSWORD}
-
+  datasource:
+    url: postgres://imdymmkgrsewnw:40d207047514aba48b941751f7a0bd9821991f1dbade649a99a4a87bc1aa97cf@ec2-46-137-170-51.eu-west-1.compute.amazonaws.com:5432/daurq08uj5jss7
+    username: imdymmkgrsewnw
+    password: 40d207047514aba48b941751f7a0bd9821991f1dbade649a99a4a87bc1aa97cf
     jpa:
-        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-        database: MYSQL
-        show-sql: true
-        hibernate:
-          ddl-auto: none
-          naming:
-            implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
-            physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      show-sql: false
+      hibernate:
+        ddl-auto: update
+        naming:
+          implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+server:
+  port: 5432
+    maxHttpHeaderSize: 102400
+    compression:
+      enabled: true
+      mime-types: text/html,text/xml,text/plain,text/css, application/javascript, application/json
+      min-response-size: 1024
+
 
