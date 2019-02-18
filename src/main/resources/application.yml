@@ -1,10 +1,16 @@
 spring:
     datasource:
-      url: postgres://ezqlphpdtvfzyr:9bf1e9fa6d372ff2ac2b858adddf3ddd0239748a690bd006e915d60fef522af3@ec2-46-137-170-51.eu-west-1.compute.amazonaws.com:5432/d7evlvi2miks14
-        username: ezqlphpdtvfzyr
-        password: 9bf1e9fa6d372ff2ac2b858adddf3ddd0239748a690bd006e915d60fef522af3
+      url: ${JDBC_DATABASE_URL}
+        username: ${JDBC_DATABASE_USERNAME}
+        password: ${JDBC_DATABASE_PASSWORD}
 
-
+    jpa:
+        show-sql: false
+        hibernate:
+          ddl-auto: update
+          naming:
+            implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+            physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 server:
   port: $PORT
     maxHttpHeaderSize: 102400
