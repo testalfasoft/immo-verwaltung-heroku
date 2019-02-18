@@ -4,9 +4,9 @@ spring:
         username: ezqlphpdtvfzyr
         password: 9bf1e9fa6d372ff2ac2b858adddf3ddd0239748a690bd006e915d60fef522af3
 
- 
+
 server:
-    port: 9009
+  port: $PORT
     maxHttpHeaderSize: 102400
     compression:
         enabled: true
