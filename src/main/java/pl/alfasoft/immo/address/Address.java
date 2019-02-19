@@ -11,7 +11,7 @@ import static javax.persistence.CascadeType.PERSIST;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-@Table(name = "house")
+@Table(name = "house", schema = "public")
 public class Address {
 
     @Id

@@ -8,7 +8,7 @@ import javax.persistence.*;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-@Table(name = "flat")
+@Table(name = "flat", schema = "public")
 public class Property {
 
     @Id
