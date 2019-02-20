@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PropertyRepository extends JpaRepository<Property, Long> {
-    @Query(value = "SELECT * FROM PROPERTIES WHERE FL_ID = ?1", nativeQuery = true)
+    @Query(value = "SELECT * FROM PROPERTIES ORDER BY FL_ID DESC", nativeQuery = true)
     Page<Property> findPropertiesByAddress_Id(Pageable pageable,  Long addressId);
 }
