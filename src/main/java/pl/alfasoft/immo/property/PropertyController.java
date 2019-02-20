@@ -4,7 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -34,7 +33,7 @@ public class PropertyController {
     public ResponseEntity<List<Property>> getAllProperties(Pageable pageable) {
 
         log.debug("REST request to get a page of Properties");
-        Page<Property> page = propertyService.findAll((Pageable) new Sort(Sort.Direction.ASC, "fl_id"));
+        Page<Property> page = propertyService.findAll(pageable);
         return ResponseEntity
                 .ok()
                 .headers(generatePaginationHttpHeaders(page, "/properties"))
