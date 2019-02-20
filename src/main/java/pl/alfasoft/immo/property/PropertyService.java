@@ -39,6 +39,6 @@ public class PropertyService {
     }
 
     public Page<Property> findAllByAddressId(Pageable pageable, Long addressId) {
-        return propertyRepository.findPropertiesByAddress_Id(pageable, addressId);
+        return propertyRepository.findAllByPropertiesByAddress_Id(pageable, addressId);
     }
 }
