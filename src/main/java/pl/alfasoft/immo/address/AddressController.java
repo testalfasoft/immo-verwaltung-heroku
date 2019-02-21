@@ -106,14 +106,14 @@ public class AddressController {
                 .headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString()))
                 .build();
     }
-    @GetMapping("/address/add/{id}")
-    public ResponseEntity<List<Address>> findAllAddresById(Pageable pageable, @PathVariable Long id) {
-
-        log.debug("REST request to get Property By Address id : {}", id);
-        Page<Address> page = addressService.findAllAddressById(pageable, id);
-        return ResponseEntity
-                .ok()
-                .headers(generatePaginationHttpHeaders(page, "/address/add/{id}"))
-                .body(page.getContent());
-    }
+//    @GetMapping("/address/add/{id}")
+//    public ResponseEntity<List<Address>> findAllAddresById(Pageable pageable, @PathVariable Long id) {
+//
+//        log.debug("REST request to get Property By Address id : {}", id);
+//        Page<Address> page = addressService.findAllAddressById(pageable, id);
+//        return ResponseEntity
+//                .ok()
+//                .headers(generatePaginationHttpHeaders(page, "/address/add/{id}"))
+//                .body(page.getContent());
+//    }
 }
