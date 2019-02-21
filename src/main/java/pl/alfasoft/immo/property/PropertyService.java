@@ -3,7 +3,6 @@ package pl.alfasoft.immo.property;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,8 +24,8 @@ public class PropertyService {
     }
 
     @Transactional(readOnly = true)
-    public Sort findAll(Pageable pageable) {
-        return propertyRepository.findAll(pageable).getSort().descending();
+    public Page<Property> findAll(Pageable pageable) {
+        return propertyRepository.findAll(pageable);
     }
 
 
