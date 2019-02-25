@@ -36,9 +36,9 @@ public class AddressController {
 
 
     @GetMapping("/address/add")
-    public ResponseEntity<List<Address>> getAllAddresses(Pageable pageable, Long id) {
+    public ResponseEntity<List<Address>> getAllAddresses(Pageable pageable) {
         log.debug("REST request to get a page of Addresses");
-        Page<Address> page = addressService.findAll(pageable, id);
+        Page<Address> page = addressService.findAll(pageable);
         if (page.isEmpty()) {
             ResponseEntity
                     .status(NOT_FOUND)
