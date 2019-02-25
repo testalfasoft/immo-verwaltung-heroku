@@ -62,7 +62,7 @@ public class AddressService {
         log.debug("Request to delete Address : {}", id);
         addressRepository.deleteById(id);
     }
-    public Page<Address> getAddress(Pageable pageable, Long id) {
-        return addressRepository.getAddress(pageable, id);
+    public Page<Address> getAllAddresses(Pageable pageable, Long id) {
+        return addressRepository.getAllAddresses(pageable, id);
     }
 }
