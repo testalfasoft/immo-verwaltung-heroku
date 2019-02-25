@@ -98,14 +98,5 @@ public class PropertyController {
                 .build();
     }
 
-//    @GetMapping("/properties/address/{addressId}")
-//    public ResponseEntity<List<Property>> findAllByAddressId(Pageable pageable, @PathVariable Long addressId) {
-//
-//        log.debug("REST request to get Property By Address id : {}", addressId);
-//        Page<Property> page = propertyService.findAllByAddressId(pageable, addressId);
-//        return ResponseEntity
-//                .ok()
-//                .headers(generatePaginationHttpHeaders(page, "/properties/address/*"))
-//                .body(page.getContent());
-//    }
+
 }
