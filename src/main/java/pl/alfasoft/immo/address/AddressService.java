@@ -44,10 +44,10 @@ public class AddressService {
     }
 
     @Transactional(readOnly = true)
-    public Page<Address> findAll(Pageable pageable) {
+    public Page<Address> findAll(Pageable pageable, Long id) {
 
         log.debug("Request to get all Addresses");
-        return addressRepository.findAll(pageable);
+        return addressRepository.findAll(pageable, id);
     }
 
     @Transactional(readOnly = true)
@@ -62,7 +62,5 @@ public class AddressService {
         log.debug("Request to delete Address : {}", id);
         addressRepository.deleteById(id);
     }
-    public Page<Address> getAllAddresses(Pageable pageable, Long id) {
-        return addressRepository.getAllAddresses(pageable, id);
-    }
+
 }
