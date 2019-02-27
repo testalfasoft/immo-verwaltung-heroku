@@ -37,7 +37,7 @@ public class AddressService {
             property.setName("Wohnung " + (i + 1));
             property.setAddress(address);
             listOfProperties.add(property);
-           // propertyRepository.save(property); //FIXME 07.02
+            // propertyRepository.save(property); //FIXME 07.02
         }
         address.setProperties(listOfProperties);
         return addressRepository.save(address);
