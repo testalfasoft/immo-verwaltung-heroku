@@ -15,6 +15,8 @@ import java.util.List;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
+import static pl.alfasoft.immo.HeaderUtil.generatePaginationHttpHeaders;
+
 @CrossOrigin(exposedHeaders = "errors, content-type")
 @RestController
 @RequestMapping({"/api"})
