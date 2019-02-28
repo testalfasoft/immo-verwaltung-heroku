@@ -9,6 +9,6 @@ import pl.alfasoft.immo.property.Property;
 
 @Repository
 public interface AddressRepository extends JpaRepository<Address, Long> {
-    @Query(value = "SELECT name FROM Property ORDER BY name DESC")
+    @Query(value = "SELECT id FROM Address ORDER BY id DESC")
     Page<Address> findAllByAddressByAddress_Id(Pageable pageable, Long id);
 }
