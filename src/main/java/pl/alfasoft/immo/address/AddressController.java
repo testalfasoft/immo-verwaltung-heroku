@@ -105,7 +105,7 @@ public class AddressController {
                 .headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString()))
                 .build();
     }
-    @GetMapping("/address/add/{addressId}")
+    @GetMapping("/address/add/{id}")
     public ResponseEntity<List<Address>> findAllByAddressId(Pageable pageable, @PathVariable Long addressId) {
 
         log.debug("REST request to get Property By Address id : {}", addressId);
