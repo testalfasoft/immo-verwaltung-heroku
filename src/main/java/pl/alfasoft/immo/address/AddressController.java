@@ -39,7 +39,7 @@ public class AddressController {
     public ResponseEntity<List<Address>> getAllAddresses(Pageable pageable) {
         log.debug("REST request to get a page of Addresses");
         Page<Address> page = addressService.findAll(Sort.by(Sort.Direction.ASC, "id"));
-
+// twoja stara
         if (page.isEmpty()) {
             ResponseEntity
                     .status(NOT_FOUND)
