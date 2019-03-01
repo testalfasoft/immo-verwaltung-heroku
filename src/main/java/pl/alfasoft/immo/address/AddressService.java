@@ -45,10 +45,10 @@ public class AddressService {
     }
 
     @Transactional(readOnly = true)
-    public Page<Address> findAll(Pageable pageable, Long id) {
+    public Page<Address> findAllById(Pageable pageable, Long id) {
 
         log.debug("Request to get all Addresses");
-        return addressRepository.findAll(pageable, id);
+        return addressRepository.findAllById(pageable, id);
     }
 
     @Transactional(readOnly = true)
