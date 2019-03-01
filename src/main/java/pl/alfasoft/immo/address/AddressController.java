@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.alfasoft.immo.HeaderUtil;
@@ -37,7 +38,7 @@ public class AddressController {
     @GetMapping("/address/add")
     public ResponseEntity<List<Address>> getAllAddresses(Pageable pageable) {
         log.debug("REST request to get a page of Addresses");
-        Page<Address> page = addressService.findAll(pageable);
+        Page<Address> page = addressService.findAll(Sort.by(Sort.Direction.DESC, "id");
         if (page.isEmpty()) {
             ResponseEntity
                     .status(NOT_FOUND)
