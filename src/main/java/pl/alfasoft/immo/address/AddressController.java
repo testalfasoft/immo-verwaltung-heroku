@@ -12,6 +12,8 @@ import pl.alfasoft.immo.HeaderUtil;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
@@ -39,6 +41,7 @@ public class AddressController {
     public ResponseEntity<List<Address>> getAllAddresses(Pageable pageable) {
         log.debug("REST request to get a page of Addresses");
         Page<Address> page = addressService.findAll(pageable);
+        Collections.reverse((List<?>) page);
         if (page.isEmpty()) {
             ResponseEntity
                     .status(NOT_FOUND)
