@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.alfasoft.immo.property.Property;
@@ -65,5 +66,9 @@ public class AddressService {
 
     public Page<Address> findAllByAddressId(Pageable pageable, Long id) {
         return addressRepository.findAllByAddressByAddress_Id(pageable, id);
+    }
+
+    public Page<Address> findAll(Sort id) {
+        return  addressRepository.findAllByAddressByAddress_Id(id);
     }
 }
