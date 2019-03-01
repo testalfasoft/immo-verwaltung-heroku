@@ -64,11 +64,7 @@ public class AddressService {
         addressRepository.deleteById(id);
     }
 
-    public Page<Address> findAllByAddressId(Pageable pageable, Long id) {
-        return addressRepository.findAllByAddressByAddress_Id(pageable, id);
-    }
-
-    public Page<Address> findAll(Sort id) {
-        return  addressRepository.findAllByAddressByAddress_Id(id);
+    public Page<Address> findAllByAddressId(Pageable pageable, Long addressId) {
+        return addressRepository.findAllByAddressByAddress_Id(pageable, addressId);
     }
 }
