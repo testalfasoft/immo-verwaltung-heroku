@@ -123,7 +123,7 @@ var IconsComponent = /** @class */ (function () {
                 'nb-play', 'nb-play-outline', 'nb-plus', 'nb-plus-circled', 'nb-power', 'nb-power-circled',
                 'nb-rainy', 'nb-roller-shades', 'nb-search', 'nb-shuffle', 'nb-skip-backward',
                 'nb-skip-backward-outline', 'nb-skip-forward', 'nb-skip-forward-outline', 'nb-snowy-circled',
-                'nb-square', 'nb-square-outline', 'nb-star', 'nb-sunny', 'nb-sunny-circled', 'nb-tables', 'nb-postalcode',
+                'nb-square', 'nb-square-outline', 'nb-star', 'nb-sunny', 'nb-sunny-circled', 'nb-tables', 'nb-title',
                 'nb-trash', 'nb-volume-high', 'nb-volume-mute', 'nb-drop', 'nb-drops', 'nb-info', 'nb-expand', 'nb-collapse',
                 'nb-e-commerce', 'nb-danger', 'nb-checkmark-circle', 'nb-help'],
             ionicons: [
@@ -147,8 +147,7 @@ var IconsComponent = /** @class */ (function () {
                 'fa fa-chart-bar', 'far fa-chart-bar', 'fa fa-barcode', 'fa fa-bars', 'fa fa-bed', 'fa fa-beer',
                 'fa fa-bell', 'far fa-bell', 'fa fa-bell-slash', 'far fa-bell-slash', 'fa fa-bicycle', 'fa fa-binoculars',
                 'fa fa-birthday-cake', 'fa fa-bolt', 'fa fa-bomb', 'fa fa-book', 'fa fa-bookmark', 'far fa-bookmark',
-                'fa fa-briefcase', 'fa fa-bug', 'fa fa-building', 'far fa-building', 'fa fa-bullhorn', 'fa fa-cogs', 'fas fa-cog',
-                'fas fa-trash',
+                'fa fa-briefcase', 'fa fa-bug', 'fa fa-building', 'far fa-building', 'fa fa-bullhorn', 'fas fa-cogs',
             ],
         };
         this.evaIcons = Object.keys(eva_icons__WEBPACK_IMPORTED_MODULE_1__["icons"]).filter(function (icon) { return icon.indexOf('outline') === -1; });
