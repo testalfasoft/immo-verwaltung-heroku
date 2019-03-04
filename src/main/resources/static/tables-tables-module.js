@@ -23573,25 +23573,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/rxjs-compat/_esm5/add/operator/catch.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/rxjs-compat/_esm5/add/operator/catch.js ***!
-  \**************************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var _operator_catch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../operator/catch */ "./node_modules/rxjs-compat/_esm5/operator/catch.js");
-
-
-rxjs__WEBPACK_IMPORTED_MODULE_0__["Observable"].prototype.catch = _operator_catch__WEBPACK_IMPORTED_MODULE_1__["_catch"];
-rxjs__WEBPACK_IMPORTED_MODULE_0__["Observable"].prototype._catch = _operator_catch__WEBPACK_IMPORTED_MODULE_1__["_catch"];
-//# sourceMappingURL=catch.js.map
-
-/***/ }),
-
 /***/ "./node_modules/rxjs-compat/_esm5/observable/timer.js":
 /*!************************************************************!*\
   !*** ./node_modules/rxjs-compat/_esm5/observable/timer.js ***!
@@ -23606,25 +23587,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //# sourceMappingURL=timer.js.map
-
-/***/ }),
-
-/***/ "./node_modules/rxjs-compat/_esm5/operator/catch.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/rxjs-compat/_esm5/operator/catch.js ***!
-  \**********************************************************/
-/*! exports provided: _catch */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_catch", function() { return _catch; });
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-
-function _catch(selector) {
-    return Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_0__["catchError"])(selector)(this);
-}
-//# sourceMappingURL=catch.js.map
 
 /***/ }),
 
@@ -24515,102 +24477,6 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./src/app/pages/tables/smart-property/smart-property.component.html":
-/*!***************************************************************************!*\
-  !*** ./src/app/pages/tables/smart-property/smart-property.component.html ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<nb-card>\r\n  <nb-card-header>\r\n    Property\r\n  </nb-card-header>\r\n\r\n  <nb-card-body>\r\n    <ng2-smart-table [settings]=\"settings\" [source]=\"source\" (deleteConfirm)=\"onDeleteConfirm($event)\">\r\n    </ng2-smart-table>\r\n  </nb-card-body>\r\n</nb-card>\r\n"
-
-/***/ }),
-
-/***/ "./src/app/pages/tables/smart-property/smart-property.component.ts":
-/*!*************************************************************************!*\
-  !*** ./src/app/pages/tables/smart-property/smart-property.component.ts ***!
-  \*************************************************************************/
-/*! exports provided: SmartPropertyComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SmartPropertyComponent", function() { return SmartPropertyComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var ng2_smart_table__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ng2-smart-table */ "./node_modules/ng2-smart-table/index.js");
-/* harmony import */ var _core_data_smart_table_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../@core/data/smart-table.service */ "./src/app/@core/data/smart-table.service.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var SmartPropertyComponent = /** @class */ (function () {
-    function SmartPropertyComponent(service) {
-        this.service = service;
-        this.settings = {
-            add: {
-                addButtonContent: '<i class="nb-plus"></i>',
-                createButtonContent: '<i class="nb-checkmark"></i>',
-                cancelButtonContent: '<i class="nb-close"></i>',
-            },
-            edit: {
-                editButtonContent: '<i class="nb-edit"></i>',
-                saveButtonContent: '<i class="nb-checkmark"></i>',
-                cancelButtonContent: '<i class="nb-close"></i>',
-            },
-            delete: {
-                deleteButtonContent: '<i class="nb-trash"></i>',
-                confirmDelete: true,
-            },
-            columns: {
-                firstName: {
-                    title: 'Street',
-                    type: 'string',
-                },
-                lastName: {
-                    title: 'Postal Code',
-                    type: 'number',
-                },
-                username: {
-                    title: 'City',
-                    type: 'string',
-                },
-            },
-        };
-        this.source = new ng2_smart_table__WEBPACK_IMPORTED_MODULE_1__["LocalDataSource"]();
-        var data = this.service.getData();
-        this.source.load(data);
-    }
-    SmartPropertyComponent.prototype.onDeleteConfirm = function (event) {
-        if (window.confirm('Are you sure you want to delete?')) {
-            event.confirm.resolve();
-        }
-        else {
-            event.confirm.reject();
-        }
-    };
-    SmartPropertyComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'ngx-smart-property',
-            template: __webpack_require__(/*! ./smart-property.component.html */ "./src/app/pages/tables/smart-property/smart-property.component.html"),
-            styles: ["\n    nb-card {\n      transform: translate3d(0, 0, 0);\n    }\n  "],
-        }),
-        __metadata("design:paramtypes", [_core_data_smart_table_service__WEBPACK_IMPORTED_MODULE_2__["SmartTableService"]])
-    ], SmartPropertyComponent);
-    return SmartPropertyComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/pages/tables/smart-table/smart-table.component.html":
 /*!*********************************************************************!*\
   !*** ./src/app/pages/tables/smart-table/smart-table.component.html ***!
@@ -24618,7 +24484,7 @@ var SmartPropertyComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nb-card>\r\n  <nb-card-header>\r\n    Adress\r\n  </nb-card-header>\r\n\r\n  <nb-card-body>\r\n    <ng2-smart-table [settings]=\"settings\" [source]=\"source\" (deleteConfirm)=\"onDeleteConfirm($event)\">\r\n    </ng2-smart-table>\r\n  </nb-card-body>\r\n</nb-card>\r\n"
+module.exports = "<nb-card>\r\n  <nb-card-header>\r\n    Adress\r\n  </nb-card-header>\r\n\r\n  <nb-card-body>\r\n    <ng2-smart-table [settings]=\"settings\" [source]=\"source\" (deleteConfirm)=\"onDeleteConfirm($event)\">\r\n    </ng2-smart-table>\r\n  </nb-card-body>\r\n</nb-card>\r\n<div class=\"row\">\r\n  <div class=\"col-sm-4\">\r\n    <button type=\"button\" style=\"\r\n    margin-left: 4px;\r\n    background: cadetblue;\r\n\" class=\"btn btn-primary btn-lg xd\"><i class=\"nb-plus\"></i></button>\r\n  </div>\r\n</div>\r\n\r\n<table class=\"table table-striped\" style=\"color: black\">\r\n  <thead>\r\n\r\n  <tr>\r\n    <th *ngFor=\"let head of headElements\" scope=\"col\">{{head}} </th>\r\n  </tr>\r\n  </thead>\r\n  <tbody>\r\n  <tr *ngFor=\"let el of elements\">\r\n    <th scope=\"row\">{{el.first}}<p>{{el.last}} {{el.handle}}</p></th>\r\n    <td>\r\n      <button type=\"button\"class=\"btn btn-success btn-lg\"><i class=\"nb-edit\"></i></button>\r\n    </td>\r\n    <td>\r\n    <button type=\"button\" class=\"btn btn-danger btn-lg\" style=\"margin-right: 705px\"><i class=\"nb-trash\"></i></button>\r\n    </td>\r\n  </tr>\r\n  </tbody>\r\n</table>\r\n"
 
 /***/ }),
 
@@ -24635,6 +24501,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var ng2_smart_table__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ng2-smart-table */ "./node_modules/ng2-smart-table/index.js");
 /* harmony import */ var _core_data_smart_table_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../@core/data/smart-table.service */ "./src/app/@core/data/smart-table.service.ts");
+/* harmony import */ var _nebular_theme__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @nebular/theme */ "./node_modules/@nebular/theme/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -24647,9 +24514,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var SmartTableComponent = /** @class */ (function () {
-    function SmartTableComponent(service) {
+    function SmartTableComponent(service, windowService) {
         this.service = service;
+        this.windowService = windowService;
+        this.elements = [
+            { first: 'Zgierska 23', last: '91-462', handle: 'Lodz' },
+            { first: 'Piotrowa 11', last: '91-863', handle: 'Lodz' },
+            { first: 'Lisciasta 14', last: '91-553', handle: 'Lodz' },
+        ];
+        this.headElements = ['Adress'];
         this.settings = {
             add: {
                 addButtonContent: '<i class="nb-plus"></i>',
@@ -24696,9 +24571,9 @@ var SmartTableComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ngx-smart-table',
             template: __webpack_require__(/*! ./smart-table.component.html */ "./src/app/pages/tables/smart-table/smart-table.component.html"),
-            styles: ["\n    nb-card {\n      transform: translate3d(0, 0, 0);\n    }\n  "],
+            styles: ["\n    nb-card {\n      transform: translate3d(0, 0, 0);\n    }\n    xd{\n      padding: 0.875rem 1.75rem;\n      font-size: 1.125rem;\n      line-height: 1.25;\n      border-radius: 0.75rem;\n      margin-left: 28px;\n      background-color: #3e367e;\n    }\n  "],
         }),
-        __metadata("design:paramtypes", [_core_data_smart_table_service__WEBPACK_IMPORTED_MODULE_2__["SmartTableService"]])
+        __metadata("design:paramtypes", [_core_data_smart_table_service__WEBPACK_IMPORTED_MODULE_2__["SmartTableService"], _nebular_theme__WEBPACK_IMPORTED_MODULE_3__["NbWindowService"]])
     ], SmartTableComponent);
     return SmartTableComponent;
 }());
@@ -24722,7 +24597,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _tables_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tables.component */ "./src/app/pages/tables/tables.component.ts");
 /* harmony import */ var _smart_table_smart_table_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./smart-table/smart-table.component */ "./src/app/pages/tables/smart-table/smart-table.component.ts");
-/* harmony import */ var _smart_property_smart_property_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./smart-property/smart-property.component */ "./src/app/pages/tables/smart-property/smart-property.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -24733,20 +24607,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
 var routes = [{
         path: '',
         component: _tables_component__WEBPACK_IMPORTED_MODULE_2__["TablesComponent"],
-        children: [
-            {
+        children: [{
                 path: 'smart-table',
                 component: _smart_table_smart_table_component__WEBPACK_IMPORTED_MODULE_3__["SmartTableComponent"],
-            },
-            {
-                path: 'smart-property',
-                component: _smart_property_smart_property_component__WEBPACK_IMPORTED_MODULE_4__["SmartPropertyComponent"],
-            }
-        ],
+            }],
     }];
 var TablesRoutingModule = /** @class */ (function () {
     function TablesRoutingModule() {
@@ -24763,7 +24630,6 @@ var TablesRoutingModule = /** @class */ (function () {
 var routedComponents = [
     _tables_component__WEBPACK_IMPORTED_MODULE_2__["TablesComponent"],
     _smart_table_smart_table_component__WEBPACK_IMPORTED_MODULE_3__["SmartTableComponent"],
-    _smart_property_smart_property_component__WEBPACK_IMPORTED_MODULE_4__["SmartPropertyComponent"],
 ];
 
 
@@ -24818,7 +24684,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _theme_theme_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../@theme/theme.module */ "./src/app/@theme/theme.module.ts");
 /* harmony import */ var _tables_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tables-routing.module */ "./src/app/pages/tables/tables-routing.module.ts");
 /* harmony import */ var _core_data_smart_table_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../@core/data/smart-table.service */ "./src/app/@core/data/smart-table.service.ts");
-/* harmony import */ var _smart_property_smart_property_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./smart-property/smart-property.component */ "./src/app/pages/tables/smart-property/smart-property.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -24830,11 +24695,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
-var COMPONENTS = [
-    _smart_property_smart_property_component__WEBPACK_IMPORTED_MODULE_5__["SmartPropertyComponent"],
-    _tables_routing_module__WEBPACK_IMPORTED_MODULE_3__["routedComponents"],
-];
 var TablesModule = /** @class */ (function () {
     function TablesModule() {
     }
@@ -24843,9 +24703,9 @@ var TablesModule = /** @class */ (function () {
             imports: [
                 _theme_theme_module__WEBPACK_IMPORTED_MODULE_2__["ThemeModule"],
                 _tables_routing_module__WEBPACK_IMPORTED_MODULE_3__["TablesRoutingModule"],
-                ng2_smart_table__WEBPACK_IMPORTED_MODULE_1__["Ng2SmartTableModule"]
+                ng2_smart_table__WEBPACK_IMPORTED_MODULE_1__["Ng2SmartTableModule"],
             ],
-            declarations: COMPONENTS.slice(),
+            declarations: _tables_routing_module__WEBPACK_IMPORTED_MODULE_3__["routedComponents"].slice(),
             providers: [
                 _core_data_smart_table_service__WEBPACK_IMPORTED_MODULE_4__["SmartTableService"],
             ],
