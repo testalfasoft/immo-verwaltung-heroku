@@ -39,11 +39,7 @@ public class AddressController {
     @GetMapping("/address/add")
     public ResponseEntity<List<Address>> getAllAddresses(Pageable pageable) {
         log.debug("REST request to get a page of Addresses");
-<<<<<<< HEAD
         Page<Address> page = addressService.findAllByOrderByIdDesc(pageable);
-=======
-        Page<Address> page = addressService.findAll(pageable);
->>>>>>> 677aec90c28be6c5ab4937154ce23abb256014fb
         if (page.isEmpty()) {
             ResponseEntity
                     .status(NOT_FOUND)
